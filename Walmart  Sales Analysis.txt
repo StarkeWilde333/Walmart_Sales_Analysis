@@ -1,0 +1,89 @@
+﻿Walmart Sales Analysis
+This report analyses sales data for Walmart, one of the largest global retailers, focusing on factors that could influence revenue, such as temperature, fuel cost, and seasonal trends. The dataset includes the following variables for analysis:
+* Store: Store number
+* Date: Sales week start date (formatted as DD/MM/YYYY)
+* Sales: Weekly sales (currency formatted)
+* Holiday: Presence (1) or absence (0) of a holiday
+* Temp: Air temperature in the region
+* Fuel: Fuel cost in the region
+* CPI: Consumer Price Index
+* UE: Unemployment rate
+The data spans from February 5, 2010, to October 26, 2012, covering 45 stores.
+Data Preparation
+To ensure accuracy, the following data cleaning steps were taken:
+* Filtered for missing or “0” values; none were found.
+* Renamed columns for clarity.
+* Created difference columns: Sales_Diff, Temp_Diff, Fuel_Diff, CPI_Diff, and UE_Diff to track weekly changes.
+Analysis
+The following methods and visualisations were applied to explore sales trends and potential influencing factors:
+* Slicers for Store and Holiday to filter analysis by store and holiday status.
+* Scorecards for gross, minimum, maximum, and median weekly sales to capture sales distribution.
+* Scatter Charts for:
+   * Sales by Store to compare overall store performance
+   * Sales vs. Temperature, Fuel, CPI, and UE differences to investigate correlations with sales.
+Key Findings
+1. Total Weekly Sales by Store
+There’s significant variability in sales across stores:
+* Lowest performing store: Total sales of $37,160,221.96.
+* Highest performing store: Total sales of $301,397,792.46.
+  
+
+2. Temperature vs. Sales Differences
+* All Stores: No strong correlation overall, though stores in colder regions show varied impacts.
+* Non-Holiday Weeks: Minimal correlation observed.
+* Holiday Weeks: Stronger relationship, with colder temperatures generally reducing sales and warmer temperatures increasing sales, possibly indicating regional climate effects.  
+This chart shows the relationship between sales and temperature on sales week with a holiday.
+
+
+3. Fuel Price vs. Sales Differences
+   * All Stores: No major correlation, with a few positive and negative outliers.
+   * Non-Holiday Weeks: No significant trend.
+   * Holiday Weeks: More significant impact, with changes in fuel prices noticeably affecting sales in both directions.
+  
+
+This chart shows the relationship between sales and fuel prices on sales weeks with holidays.
+
+
+4. CPI vs. Sales Differences
+   * All Stores and Non-Holiday Weeks: Little to no correlation found.
+   * Holiday Weeks: Stronger correlation observed, suggesting that CPI impacts purchasing behaviour more during high-consumer spending periods.
+  
+
+This chart shows the relationship between sales and CPI on sales weeks with holidays.
+
+
+5. Unemployment Rate vs. Sales Differences
+   * All Scenarios: No significant correlation between unemployment and weekly sales differences across holiday or non-holiday periods.
+  
+
+General Observation
+The most notable influences on sales appear to be temperature and fuel prices, particularly in stores located in regions with extreme weather variations. This suggests that climatic and environmental factors like regional temperature extremes may impact customer travel and fuel-related spending.
+Limitations
+The data has a few constraints that should be considered:
+   * Holiday Markers: Only present in February, September, November, and December for Valentine’s Day, Labor Day, Thanksgiving, Black Friday, and New Year’s. Other significant holidays and seasons (e.g., Christmas, Halloween, back-to-school) were not flagged.
+   * Regional Data: Lack of state/region information limits further investigation into temperature and fuel price correlations.
+Recommendations
+   1. Regional and Seasonal Strategies: Implement region-specific promotions in stores where extreme weather impacts customer behaviour, and extend marketing around unflagged significant holidays (e.g., Christmas, Halloween).
+   2. Fuel-Based Promotions: For stores sensitive to fuel price changes, consider transport incentives or discounts tied to fuel price trends during peak times.
+   3. Temperature-Responsive Discounts: In regions with climate-sensitive sales trends, consider targeted seasonal promotions to boost store visits during extreme temperature periods.
+Summary Table of Insights
+Factor
+	Holiday Impact
+	Non-Holiday Impact
+	Correlation Level
+	Temperature
+	Stronger effect
+	Minimal effect
+	Varies by region
+	Fuel Price
+	Notable fluctuations
+	No clear correlation
+	Some impact on holidays
+	CPI
+	Higher correlation
+	No strong correlation
+	Affects holiday sales
+	Unemployment Rate
+	No correlation
+	No correlation
+	No observable impact
